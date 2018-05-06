@@ -9,7 +9,7 @@ urlpatterns = [
     path(
         "classrooms_at/<str:time_slot>",
         views.available_classrooms,
-        "available_classrooms",
+        name="available_classrooms",
     ),
     path("teaching_at/<str:time_slot>", views.busy_teachers, name="busy_teachers"),
     path(
