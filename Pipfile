@@ -9,6 +9,8 @@ name = "pypi"
 django = "*"
 "psycopg2" = "*"
 gunicorn = "*"
+django-phonenumber-field = "*"
+django-enumfield = "*"
 
 [requires]
 python_version = "3.6"
