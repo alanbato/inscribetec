@@ -16,10 +16,13 @@ class Teacher(models.Model):
     name = models.CharField(max_length=25)
     telephone = PhoneNumberField(blank=True)
     email = models.EmailField()
-    num_classes = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
+
+    @property
+    def num_classes(self):
+        return len(Course.objects.filter(teacher__employee_id=self.employee_id))
 
 
 class Classroom(models.Model):
