@@ -1,0 +1,7 @@
+{% extends 'admin/change_form.html' %} 
+{% load static %} 
+{% static 'static_jquery/js/jquery.js' %}
+{% block admin_change_form_document_ready %}
+{{ block.super }}
+<script type="text/javascript" src="{% static 'inscript/course_validation.js' %}"></script>
+{% endblock %}

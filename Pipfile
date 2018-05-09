@@ -13,6 +13,7 @@ django-phonenumber-field = "*"
 django-enumfield = "*"
 phonenumbers = "*"
 django-heroku = "*"
+django-static-jquery = "*"
 
 [requires]
 python_version = "3.6"

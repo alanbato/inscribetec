@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_static_jquery",
     "phonenumber_field",
 ]
 
@@ -110,11 +111,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = ""
 STATIC_URL = "/static/"
 
 # Extra places for collectstatic to find static files.
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "staticfiles"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # LOGGING = {
 #     "version": 1,
