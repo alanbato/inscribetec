@@ -10,7 +10,7 @@ from .models import Teacher, Classroom, Course, Subject
 
 
 def index(request):
-    return redirect(reverse("admin"))
+    return redirect("http://inscribetec.herokuapp.com/admin")
 
 
 def reportes(request):
@@ -28,13 +28,13 @@ def reportes(request):
 
 
 def teacher_courses(request, teacher_name):
-    courses = Course.objects.filter(teacher__name=teacher_name)
+    courses = Course.objects.filter(teacher__employee_id=teacher_name)
     context = serializers.serialize("json", courses)
     return HttpResponse(json.dumps(context), content_type="application/json")
 
 
 def subject_courses(request, subject_name):
-    courses = Course.objects.filter(subject__name=subject_name)
+    courses = Course.objects.filter(subject__key=subject_name)
     context = serializers.serialize("json", courses)
     return HttpResponse(json.dumps(context), content_type="application/json")
 

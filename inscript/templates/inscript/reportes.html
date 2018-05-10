@@ -76,14 +76,14 @@
                     <p>
                         <strong>👥 Grupos de un profesor:</strong>
                     </p>
-                    <select name="Profesores">
+                    <select id="courses_by_select" name="Profesores">
                         {% for teacher in teachers %}
                         <option value="{{ teacher.employee_id }}">{{ teacher.name }}</option>
                         {% endfor %}
                     </select>
                     <br/>
                     <br/>
-                    <input type="button" name="courses_by" value="Generar" style="float:right;">
+                    <input type="button" id="courses_by_btn" value="Generar" style="float:right;">
                 </form>
                 <br/>
                 <hr>
@@ -99,7 +99,7 @@
                     </select>
                     <br/>
                     <br/>
-                    <input type="button" name="courses_of" value="Generar" style="float:right;">
+                    <input type="button" id="courses_of_btn" value="Generar" style="float:right;">
                 </form>
                 <br/>
                 <hr>
@@ -127,7 +127,7 @@
                         <option value="MAVI7">7/3 MaVi</option>
                         <option value="MI7">7/6 Mi</option>
                     </select>
-                    <input type="button" name="classrooms_at" value="Generar" style="float:right;">
+                    <input type="button" id="classrooms_at_btn" value="Generar" style="float:right;">
                 </form>
                 <hr>
 
@@ -155,7 +155,7 @@
                         <option value="MAVI7">7/3 MaVi</option>
                         <option value="MI7">7/6 Mi</option>
                     </select>
-                    <input type="button" name="teaching_at" value="Generar" style="float:right;">
+                    <input type="button" id="teaching_at_btn" value="Generar" style="float:right;">
                 </form>
                 <hr>
 
@@ -183,7 +183,7 @@
                         <option value="MAVI7">7/3 MaVi</option>
                         <option value="MI7">7/6 Mi</option>
                     </select>
-                    <input type="button" name="not_teaching_at" value="Generar" style="float:right;">
+                    <input type="button" id="not_teaching_at_btn" value="Generar" style="float:right;">
                 </form>
                 <hr>
 
@@ -204,7 +204,7 @@
                         <option value="{{ classroom.number }}">{{ classroom.number }}</option>
                         {% endfor %}
                     </select>
-                    <input type="button" name="course_at" value="Generar" style="float:right;">
+                    <input type="button" id="course_at_btn" value="Generar" style="float:right;">
                 </form>
                 <hr>
 
