@@ -21,6 +21,6 @@ admin.site.site_header = "Inscribetec"
 admin.site.index_title = "Desarrollado por Alan Velasco, Antonio Tarín, Candy Torres, Jorge Ramírez, Katia Tarín "
 
 urlpatterns = [
-    path("/", include("inscript.urls"), name='inscript'),
+    path("", include("inscript.urls"), name='inscript'),
     path("admin/", admin.site.urls, name="admin"),
 ]
