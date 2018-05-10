@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("reportes", views.reportes, name="reportes"),
     path(
         "courses_by/<str:teacher_name>", views.teacher_courses, name="teacher_courses"
     ),
@@ -22,6 +23,11 @@ urlpatterns = [
         name="available_teachers",
     ),
     path(
-        "course_at/<str:day>_<str:classroom>", views.which_course, name="which_course"
+        "course_at/<str:day>/<str:classroom>", views.which_course, name="which_course"
+    ),
+    path(
+        "check_classroom/<str:classroom>/<str:time_slot>",
+        views.validate_slot,
+        name="validate_slot",
     ),
 ]

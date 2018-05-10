@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es_MX">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reportes - InscribeTec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- icons -->
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+    <!-- Bootstrap Core CSS file -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Override CSS file - add your own CSS rules -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Conditional comment containing JS files for IE6 - 8 -->
+    <!--[if lt IE 9]>
+            <script src="js/html5.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body id="bootstrap-overrides">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container-fluid">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Abrir menú</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="maestros.html">
+                    <img src="{% static 'img/logo-inscribetec.svg' %}" alt="Sitename" height="30px">
+                </a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <h1>Sistema de Reportes</h1>
+                <p>
+                    <strong>Desarrollo de aplicaciones web.</strong>
+                    <br/> Alan Velasco, Antonio Tarín, Candy Torres, Jorge Ramírez, Katia Tarín
+                </p>
+                <h2>📄 Generar reportes</h2>
+                <hr>
+            </div>
+            <div class="col-sm-4" style="padding-right:20px; border-right:1px solid #eee;">
+
+                <form method="post">
+                    <p>
+                        <strong>👥 Grupos de un profesor:</strong>
+                    </p>
+                    <select name="Profesores">
+                        {% for teacher in teachers %}
+                        <option value="{{ teacher.employee_id }}">{{ teacher.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <br/>
+                    <br/>
+                    <input type="button" name="courses_by" value="Generar" style="float:right;">
+                </form>
+                <br/>
+                <hr>
+
+                <form method="post">
+                    <p>
+                        <strong>👥 Grupos de una materia:</strong>
+                    </p>
+                    <select name="Materias">
+                        {% for subject in subjects %}
+                        <option value="{{subject.key}}">{{ subject.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <br/>
+                    <br/>
+                    <input type="button" name="courses_of" value="Generar" style="float:right;">
+                </form>
+                <br/>
+                <hr>
+
+                <form method="post">
+                    <p>
+                        <strong>🏫 Salones disponibles según horario:</strong>
+                    </p>
+                    <select name="Horarios">
+                        <option value="MAVI8">8+/3 MaVi</option>
+                        <option value="MAVI14">14+/3 MaVi</option>
+                        <option value="LUJU10">10/3 LuJu</option>
+                        <option value="LUJU7">7/3 LuJu</option>
+                        <option value="LUJU16">16/3 LuJu</option>
+                        <option value="MAVI10">10/3 MaVi</option>
+                        <option value="MAVI13">13/3 MaVi</option>
+                        <option value="MI10">10/6 Mi</option>
+                        <option value="MI14">14+/6 Mi</option>
+                        <option value="LUJU11">11+/3 LuJu</option>
+                        <option value="LUJU14">14+/3 LuJu</option>
+                        <option value="MAVI11">11+/3 MaVi</option>
+                        <option value="MAVI16">16/3 MaVi</option>
+                        <option value="LUJU13">13/3 LuJu</option>
+                        <option value="LUJU8">8+/3 LuJu</option>
+                        <option value="MAVI7">7/3 MaVi</option>
+                        <option value="MI7">7/6 Mi</option>
+                    </select>
+                    <input type="button" name="classrooms_at" value="Generar" style="float:right;">
+                </form>
+                <hr>
+
+                <form method="post">
+                    <p>
+                        <strong>👩🏻‍🏫 Profesores ✅ CON clases en un horario:</strong>
+                    </p>
+                    <select name="Horarios">
+                        <option value="MAVI8">8+/3 MaVi</option>
+                        <option value="MAVI14">14+/3 MaVi</option>
+                        <option value="LUJU10">10/3 LuJu</option>
+                        <option value="LUJU7">7/3 LuJu</option>
+                        <option value="LUJU16">16/3 LuJu</option>
+                        <option value="MAVI14">14+/3 MaVi</option>
+                        <option value="MAVI10">10/3 MaVi</option>
+                        <option value="MAVI13">13/3 MaVi</option>
+                        <option value="MI10">10/6 Mi</option>
+                        <option value="MI14">14+/6 Mi</option>
+                        <option value="LUJU11">11+/3 LuJu</option>
+                        <option value="LUJU14">14+/3 LuJu</option>
+                        <option value="MAVI11">11+/3 MaVi</option>
+                        <option value="MAVI16">16/3 MaVi</option>
+                        <option value="LUJU13">13/3 LuJu</option>
+                        <option value="LUJU8">8+/3 LuJu</option>
+                        <option value="MAVI7">7/3 MaVi</option>
+                        <option value="MI7">7/6 Mi</option>
+                    </select>
+                    <input type="button" name="teaching_at" value="Generar" style="float:right;">
+                </form>
+                <hr>
+
+                <form method="post">
+                    <p>
+                        <strong>👩🏻‍🏫 Profesores 🚫 SIN clases en un horario:</strong>
+                    </p>
+                    <select name="Horarios">
+                        <option value="MAVI8">8+/3 MaVi</option>
+                        <option value="MAVI14">14+/3 MaVi</option>
+                        <option value="LUJU10">10/3 LuJu</option>
+                        <option value="LUJU7">7/3 LuJu</option>
+                        <option value="LUJU16">16/3 LuJu</option>
+                        <option value="MAVI14">14+/3 MaVi</option>
+                        <option value="MAVI10">10/3 MaVi</option>
+                        <option value="MAVI13">13/3 MaVi</option>
+                        <option value="MI10">10/6 Mi</option>
+                        <option value="MI14">14+/6 Mi</option>
+                        <option value="LUJU11">11+/3 LuJu</option>
+                        <option value="LUJU14">14+/3 LuJu</option>
+                        <option value="MAVI11">11+/3 MaVi</option>
+                        <option value="MAVI16">16/3 MaVi</option>
+                        <option value="LUJU13">13/3 LuJu</option>
+                        <option value="LUJU8">8+/3 LuJu</option>
+                        <option value="MAVI7">7/3 MaVi</option>
+                        <option value="MI7">7/6 Mi</option>
+                    </select>
+                    <input type="button" name="not_teaching_at" value="Generar" style="float:right;">
+                </form>
+                <hr>
+
+                <form method="post">
+                    <p>
+                        <strong>👥 Grupos impartidos en un determinado día y salón:</strong>
+                    </p>
+                    <select name="Día">
+                        <option value="Lu">Lunes</option>
+                        <option value="Ma">Martes</option>
+                        <option value="Mi">Miércoles</option>
+                        <option value="Ju">Jueves</option>
+                        <option value="Vi">Viernes</option>
+                        <option value="Sa">Sábado</option>
+                    </select>
+                    <select name="Salón">
+                        {% for classroom in classrooms %}
+                        <option value="{{ classroom.number }}">{{ classroom.number }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="button" name="course_at" value="Generar" style="float:right;">
+                </form>
+                <hr>
+
+            </div>
+            <div class="col-sm-8">
+                <h3>← Genera algún reporte usando la barra lateral.</h3>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+
+    <!-- JQuery scripts -->
+    <script src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+
+    <!-- Bootstrap Core scripts -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'inscript/report_generator.js' %}"></script>
+</body>
+
+</html>

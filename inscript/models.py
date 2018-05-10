@@ -20,7 +20,6 @@ class TimeSlot(Enum):
     MAVI14 = "MaVi 14+/3"
     MAVI16 = "MaVi 16/3"
     MAVI18 = "MaVi 18/3"
-    MAVI19 = "MaVi 19+/3"
     LUJU7 = "LuJu 7/3"
     LUJU8 = "LuJu 8+/3"
     LUJU10 = "LuJu 10/3"
@@ -29,7 +28,6 @@ class TimeSlot(Enum):
     LUJU14 = "LuJu 14+/3"
     LUJU16 = "LuJu 16/3"
     LUJU18 = "LuJu 18/3"
-    LUJU19 = "LuJu 19+/3"
     MI7 = "Mi 7/6"
     MI10 = "Mi 10/6"
     MI13 = "Mi 13/6"
@@ -79,7 +77,8 @@ class Course(models.Model):
         max_length=10, choices=[(tag.name, tag.value) for tag in TimeSlot]
     )
     lab_slot = models.CharField(
-        max_length=10, choices=[(tag.name, tag.value) for tag in TimeSlot]
+        max_length=10, choices=[(tag.name, tag.value) for tag in TimeSlot],
+        blank=True, default=""
     )
     responsability = models.IntegerField(default=100)
     in_english = models.BooleanField(default=False)

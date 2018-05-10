@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Reportes - InscribeTec</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- icons -->
+		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<!-- Bootstrap Core CSS file -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+		<!-- Override CSS file - add your own CSS rules -->
+		<link rel="stylesheet" href="assets/css/styles.css">
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+		<!-- Conditional comment containing JS files for IE6 - 8 -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body id="bootstrap-overrides">
+
+		<!-- Navigation -->
+	    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container-fluid">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Abrir menú</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="maestros.html"><img src="assets/img/logo-inscribetec.svg" alt="Sitename" height="30px"></a>
+				</div>
+				<!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="maestros.html">👩🏻‍🏫 Maestros</a></li>
+						<li><a href="salones.html">🏫 Salones</a></li>
+						<li><a href="materias.html">📓 Materias</a></li>
+						<li><a href="grupos.html">👥 Grupos</a></li>
+						<li class="active"><a href="reportes.html">📄 Reportes</a></li>
+						<li><a href="#" class="closeSession">🚪 Cerrar sesión</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- /.navbar -->
+
+		<!-- Page Content -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1>Sistema de inscripciones</h1>
+					<p>
+						<strong>Desarrollo de aplicaciones web.</strong><br/>
+						Alan Velasco, Antonio Tarín, Candy Torres, Jorge Ramírez, Katia Tarín
+					</p>
+					<h2>📄 Generar reportes</h2>
+					<hr>
+				</div>
+				<div class="col-sm-4" style="padding-right:20px; border-right:1px solid #eee;">
+
+					<form method="post">
+						<p><strong>👥 Grupos de un profesor:</strong></p>
+						<select name="Profesores">
+								<option value="A01175875">Antonio Tarín</option>
+								<option value="A00818019">Candy Torres</option>
+						</select>
+						<br/><br/>
+						<input type="submit" value="Generar" style="float:right;">
+					</form>
+					<br/>
+					<hr>
+
+					<form method="post">
+						<p><strong>👥 Grupos de una materia:</strong></p>
+						<select name="Materias">
+							<option value="TC1003">Matemáticas discretas</option>
+							<option value="TC1015">Fundamentos de diseño interactivo</option>
+						</select>
+						<br/><br/>
+						<input type="submit" value="Generar" style="float:right;">
+					</form>
+					<br/>
+					<hr>
+
+					<form method="post">
+						<p><strong>🏫 Salones disponibles según horario:</strong></p>
+						<select name="Horarios">
+							<option value="8p_3_MaVi">8+/3 MaVi</option>
+							<option value="14p_3_MaVi">14+/3 MaVi</option>
+							<option value="18_6_Lu">18/6 Lu</option>
+							<option value="10_3_LuJu">10/3 LuJu</option>
+							<option value="7_3_LuJu">7/3 LuJu</option>
+							<option value="16_3_LuJu">16/3 LuJu</option>
+							<option value="14p_3_MaVi">14+/3 MaVi</option>
+							<option value="10_3_MaVi">10/3 MaVi</option>
+							<option value="13_3_MaVi">13/3 MaVi</option>
+							<option value="10_6_Mi">10/6 Mi</option>
+							<option value="14p_6_Mi">14+/6 Mi</option>
+							<option value="11p_3_LuJu">11+/3 LuJu</option>
+							<option value="14p_3_LuJu">14+/3 LuJu</option>
+							<option value="11p_3_MaVi">11+/3 MaVi</option>
+							<option value="16_3_MaVi">16/3 MaVi</option>
+							<option value="18_6_Ma">18/6 Ma</option>
+							<option value="13_3_LuJu">13/3 LuJu</option>
+							<option value="18_6_Mi">18/6 Mi</option>
+							<option value="8p_3_LuJu">8+/3 LuJu</option>
+							<option value="18_6_Ju">18/6 Ju</option>
+							<option value="7_3_MaVi">7/3 MaVi</option>
+							<option value="7_6_Mi">7/6 Mi</option>
+							<option value="18_6_Vi">18/6 Vi</option>
+						</select>
+						<input type="submit" value="Generar" style="float:right;">
+					</form>
+					<hr>
+
+					<form method="post">
+						<p><strong>👩🏻‍🏫 Profesores ✅ CON clases en un horario:</strong></p>
+						<select name="Horarios">
+							<option value="8p_3_MaVi">8+/3 MaVi</option>
+							<option value="14p_3_MaVi">14+/3 MaVi</option>
+							<option value="18_6_Lu">18/6 Lu</option>
+							<option value="10_3_LuJu">10/3 LuJu</option>
+							<option value="7_3_LuJu">7/3 LuJu</option>
+							<option value="16_3_LuJu">16/3 LuJu</option>
+							<option value="14p_3_MaVi">14+/3 MaVi</option>
+							<option value="10_3_MaVi">10/3 MaVi</option>
+							<option value="13_3_MaVi">13/3 MaVi</option>
+							<option value="10_6_Mi">10/6 Mi</option>
+							<option value="14p_6_Mi">14+/6 Mi</option>
+							<option value="11p_3_LuJu">11+/3 LuJu</option>
+							<option value="14p_3_LuJu">14+/3 LuJu</option>
+							<option value="11p_3_MaVi">11+/3 MaVi</option>
+							<option value="16_3_MaVi">16/3 MaVi</option>
+							<option value="18_6_Ma">18/6 Ma</option>
+							<option value="13_3_LuJu">13/3 LuJu</option>
+							<option value="18_6_Mi">18/6 Mi</option>
+							<option value="8p_3_LuJu">8+/3 LuJu</option>
+							<option value="18_6_Ju">18/6 Ju</option>
+							<option value="7_3_MaVi">7/3 MaVi</option>
+							<option value="7_6_Mi">7/6 Mi</option>
+							<option value="18_6_Vi">18/6 Vi</option>
+						</select>
+						<input type="submit" value="Generar" style="float:right;">
+					</form>
+					<hr>
+
+					<form method="post">
+						<p><strong>👩🏻‍🏫 Profesores 🚫 SIN clases en un horario:</strong></p>
+						<select name="Horarios">
+							<option value="8p_3_MaVi">8+/3 MaVi</option>
+							<option value="14p_3_MaVi">14+/3 MaVi</option>
+							<option value="18_6_Lu">18/6 Lu</option>
+							<option value="10_3_LuJu">10/3 LuJu</option>
+							<option value="7_3_LuJu">7/3 LuJu</option>
+							<option value="16_3_LuJu">16/3 LuJu</option>
+							<option value="14p_3_MaVi">14+/3 MaVi</option>
+							<option value="10_3_MaVi">10/3 MaVi</option>
+							<option value="13_3_MaVi">13/3 MaVi</option>
+							<option value="10_6_Mi">10/6 Mi</option>
+							<option value="14p_6_Mi">14+/6 Mi</option>
+							<option value="11p_3_LuJu">11+/3 LuJu</option>
+							<option value="14p_3_LuJu">14+/3 LuJu</option>
+							<option value="11p_3_MaVi">11+/3 MaVi</option>
+							<option value="16_3_MaVi">16/3 MaVi</option>
+							<option value="18_6_Ma">18/6 Ma</option>
+							<option value="13_3_LuJu">13/3 LuJu</option>
+							<option value="18_6_Mi">18/6 Mi</option>
+							<option value="8p_3_LuJu">8+/3 LuJu</option>
+							<option value="18_6_Ju">18/6 Ju</option>
+							<option value="7_3_MaVi">7/3 MaVi</option>
+							<option value="7_6_Mi">7/6 Mi</option>
+							<option value="18_6_Vi">18/6 Vi</option>
+						</select>
+						<input type="submit" value="Generar" style="float:right;">
+					</form>
+					<hr>
+
+					<form method="post">
+						<p><strong>👥 Grupos impartidos en un determinado día y salón:</strong></p>
+						<select name="Día">
+							<option value="lunes">Lunes</option>
+							<option value="martes">Martes</option>
+							<option value="miercoles">Miércoles</option>
+							<option value="miercoles">Jueves</option>
+							<option value="miercoles">Viernes</option>
+							<option value="miercoles">Sábado</option>
+						</select>
+						<select name="Salón">
+							<option value="A3-101">A3-101</option>
+							<option value="A3-103">A3-103</option>
+							<option value="A3-201">A3-201</option>
+							<option value="A3-202">A3-202</option>
+						</select>
+						<input type="submit" value="Generar" style="float:right;">
+					</form>
+					<hr>
+
+				</div>
+				<div class="col-sm-8">
+					<h3>← Genera algún reporte usando la barra lateral.</h3>
+
+				</div>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+
+		<!-- JQuery scripts -->
+	    <script src="assets/js/jquery-1.11.2.min.js"></script>
+
+		<!-- Bootstrap Core scripts -->
+		<script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

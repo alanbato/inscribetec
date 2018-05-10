@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+admin.site.site_title = "Admin Site"
+admin.site.site_header = "Inscribetec"
+admin.site.index_title = "Desarrollado por Alan Velasco, Antonio Tarín, Candy Torres, Jorge Ramírez, Katia Tarín "
+
 urlpatterns = [
     path("inscript/", include("inscript.urls"), name='inscript'),
     path("admin/", admin.site.urls, name="admin"),
