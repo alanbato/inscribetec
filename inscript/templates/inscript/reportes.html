@@ -92,7 +92,7 @@
                     <p>
                         <strong>👥 Grupos de una materia:</strong>
                     </p>
-                    <select name="Materias">
+                    <select name="Materias" id="courses_of_select">
                         {% for subject in subjects %}
                         <option value="{{subject.key}}">{{ subject.name }}</option>
                         {% endfor %}
@@ -108,7 +108,7 @@
                     <p>
                         <strong>🏫 Salones disponibles según horario:</strong>
                     </p>
-                    <select name="Horarios">
+                    <select name="Horarios" id="classrooms_at_select">
                         <option value="MAVI8">8+/3 MaVi</option>
                         <option value="MAVI14">14+/3 MaVi</option>
                         <option value="LUJU10">10/3 LuJu</option>
@@ -135,7 +135,7 @@
                     <p>
                         <strong>👩🏻‍🏫 Profesores ✅ CON clases en un horario:</strong>
                     </p>
-                    <select name="Horarios">
+                    <select name="Horarios" id="teaching_at_select">
                         <option value="MAVI8">8+/3 MaVi</option>
                         <option value="MAVI14">14+/3 MaVi</option>
                         <option value="LUJU10">10/3 LuJu</option>
@@ -163,7 +163,7 @@
                     <p>
                         <strong>👩🏻‍🏫 Profesores 🚫 SIN clases en un horario:</strong>
                     </p>
-                    <select name="Horarios">
+                    <select name="Horarios" id="not_teaching_at_select">
                         <option value="MAVI8">8+/3 MaVi</option>
                         <option value="MAVI14">14+/3 MaVi</option>
                         <option value="LUJU10">10/3 LuJu</option>
@@ -191,7 +191,7 @@
                     <p>
                         <strong>👥 Grupos impartidos en un determinado día y salón:</strong>
                     </p>
-                    <select name="Día">
+                    <select name="Día2" id="courses_at_day_select">
                         <option value="Lu">Lunes</option>
                         <option value="Ma">Martes</option>
                         <option value="Mi">Miércoles</option>
@@ -199,17 +199,17 @@
                         <option value="Vi">Viernes</option>
                         <option value="Sa">Sábado</option>
                     </select>
-                    <select name="Salón">
+                    <select name="Salón2" id="courses_at_classroom_select">
                         {% for classroom in classrooms %}
                         <option value="{{ classroom.number }}">{{ classroom.number }}</option>
                         {% endfor %}
                     </select>
-                    <input type="button" id="course_at_btn" value="Generar" style="float:right;">
+                    <input type="button" id="courses_at_btn" value="Generar" style="float:right;">
                 </form>
                 <hr>
 
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-8" id="reporte">
                 <h3>← Genera algún reporte usando la barra lateral.</h3>
 
             </div>

@@ -37,7 +37,7 @@ class TimeSlot(Enum):
 class Teacher(models.Model):
     employee_id = models.CharField(max_length=9, unique=True)
     name = models.CharField(max_length=25)
-    telephone = PhoneNumberField(blank=True)
+    telephone = models.CharField(max_length=15, blank=True, default='')
     email = models.EmailField()
 
     def __str__(self):
