@@ -49,7 +49,7 @@ function courses_by() {
                 );
             }
             else {
-                element = "<p>Este maestro no tiene grupos asignados.</p>";
+                element = "<h2>Este maestro no tiene grupos asignados.</h2>";
             }
             $("div#reporte").empty()
             $("div#reporte").append(element)
@@ -114,7 +114,7 @@ function courses_of() {
                 );
             }
             else {
-                element = "<p>No hay grupos para esta materia.</p>";
+                element = "<h2>No hay grupos para esta materia.</h2>";
             }
             $("div#reporte").empty();
             $("div#reporte").append(element);
@@ -161,7 +161,7 @@ function classrooms_at() {
                 );
             }
             else {
-                element = "<p>No hay salones disponibles en este horario.</p>";
+                element = "<h2>No hay salones disponibles en este horario.</h2>";
             }
             $("div#reporte").empty();
             $("div#reporte").append(element);
@@ -212,7 +212,7 @@ function teaching_at() {
                 );
             }
             else {
-                element = "<p>No hay maestros enseñando en este horario.</p>";
+                element = "<h2>No hay maestros enseñando en este horario.</h2>";
             }
             $("div#reporte").empty();
             $("div#reporte").append(element);
@@ -263,7 +263,7 @@ function not_teaching_at() {
                 );
             }
             else {
-                element = "<p>Todos los maestros están enseñando en este horario.</p>";
+                element = "<h2>Todos los maestros están enseñando en este horario.</h2>";
             }
             $("div#reporte").empty();
             $("div#reporte").append(element);
@@ -327,7 +327,7 @@ function courses_at() {
                 );
             }
             else {
-                element = "<p>No hay grupos ese día en ese salón.</p>";
+                element = "<h2>No hay grupos ese día en ese salón.</h2>";
             }
             $("div#reporte").empty();
             $("div#reporte").append(element);
